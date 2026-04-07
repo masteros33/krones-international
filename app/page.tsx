@@ -1,7 +1,11 @@
 'use client'
 
+
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
+
 import { useEffect, useRef, useState } from 'react'
-import emailjs from '@emailjs/browser'
+import emailjs from '@emailjs/browser' 
 
 const EMAILJS_SERVICE_ID  = 'service_r30d4ua'
 const EMAILJS_TEMPLATE_ID = 'template_5pn8b7d'
