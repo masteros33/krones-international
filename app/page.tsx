@@ -7,19 +7,18 @@ const EMAILJS_SERVICE_ID  = 'service_r30d4ua'
 const EMAILJS_TEMPLATE_ID = 'template_5pn8b7d'
 const EMAILJS_PUBLIC_KEY  = 's9bzBaRtEktfBRtF6'
 
-// Free Unsplash images of actual products
 const IMAGES = {
-  pvc:          'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&auto=format&fit=crop',
-  polypropylene:'https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?w=600&auto=format&fit=crop',
-  eva:          'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&auto=format&fit=crop',
-  polyethylene: 'https://images.unsplash.com/photo-1605600659908-0ef719419d41?w=600&auto=format&fit=crop',
-  polycarbonate:'https://images.unsplash.com/photo-1581092160562-40aa08e32f35?w=600&auto=format&fit=crop',
-  carbonBlack:  'https://images.unsplash.com/photo-1618477461853-cf6ed80faba5?w=600&auto=format&fit=crop',
-  pet:          'https://images.unsplash.com/photo-1530587191325-3db32d826c18?w=600&auto=format&fit=crop',
-  nylon6:       'https://images.unsplash.com/photo-1558618047-3c3c9be4e1ac?w=600&auto=format&fit=crop',
-  abs:          'https://images.unsplash.com/photo-1567789884554-0b844b597180?w=600&auto=format&fit=crop',
-  pom:          'https://images.unsplash.com/photo-1565849904461-04a58ad377e0?w=600&auto=format&fit=crop',
-  pbt:          'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&auto=format&fit=crop',
+  pvc:          'https://uniglobustrading.com/wp-content/uploads/2021/11/PVC-powder.jpg',
+  polypropylene:'https://uniglobustrading.com/wp-content/uploads/2021/11/polypropylene.jpg',
+  eva:          'https://uniglobustrading.com/wp-content/uploads/2021/11/EVA.jpg',
+  polyethylene: 'https://uniglobustrading.com/wp-content/uploads/2021/11/polyethylene.jpg',
+  polycarbonate:'https://uniglobustrading.com/wp-content/uploads/2021/11/polycarbonate.jpg',
+  carbonBlack:  'https://uniglobustrading.com/wp-content/uploads/2021/11/carbon-black.jpg',
+  pet:          'https://uniglobustrading.com/wp-content/uploads/2021/11/PET.jpg',
+  nylon6:       'https://uniglobustrading.com/wp-content/uploads/2021/11/nylon6.jpg',
+  abs:          'https://uniglobustrading.com/wp-content/uploads/2021/11/ABS.jpg',
+  pom:          'https://uniglobustrading.com/wp-content/uploads/2021/11/POM.jpg',
+  pbt:          'https://uniglobustrading.com/wp-content/uploads/2021/11/pbt-1.jpg',
 }
 
 const products = [
@@ -103,11 +102,9 @@ export default function Home() {
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Outfit', sans-serif; overflow-x: hidden; }
-        
         .nav-links-desktop { display: flex; }
-        .hamburger { display: none; }
+        .hamburger { display: none !important; }
         .mobile-menu { display: none; }
-        
         @media (max-width: 768px) {
           .nav-links-desktop { display: none !important; }
           .hamburger { display: flex !important; }
@@ -116,9 +113,8 @@ export default function Home() {
           .hero-right { display: none !important; }
           .stats-grid { grid-template-columns: repeat(2,1fr) !important; }
           .about-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
-          .products-grid { grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)) !important; }
+          .products-grid { grid-template-columns: 1fr !important; }
           .mistakes-row { grid-template-columns: 40px 1fr !important; gap: 16px !important; padding: 20px !important; }
-          .knowhelp-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
           .contact-grid { grid-template-columns: 1fr !important; gap: 32px !important; }
           .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
           .footer-bottom-inner { flex-direction: column !important; text-align: center !important; }
@@ -131,17 +127,15 @@ export default function Home() {
           .logo-tag { font-size: 0.6rem !important; }
           .section-header { flex-direction: column !important; align-items: flex-start !important; }
         }
-        
         @media (max-width: 480px) {
           .footer-grid { grid-template-columns: 1fr !important; }
-          .stats-grid { grid-template-columns: repeat(2,1fr) !important; }
         }
       `}</style>
 
       {/* TOPBAR */}
       <div style={{background:s.black,color:'#94a3b8',fontSize:'0.8rem',padding:'9px 0',borderBottom:'1px solid rgba(14,165,233,0.2)'}}>
-        <div className="topbar-inner" style={{maxWidth:'1240px',margin:'0 auto',padding:'0 20px',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap',gap:'6px'}}>
-          <div style={{display:'flex',gap:'16px',alignItems:'center',flexWrap:'wrap'}}>
+        <div className="topbar-inner" style={{maxWidth:'1240px',margin:'0 auto',padding:'0 20px',display:'flex',justifyContent:'space-between',alignItems:'center',flexWrap:'wrap' as const,gap:'6px'}}>
+          <div style={{display:'flex',gap:'16px',alignItems:'center',flexWrap:'wrap' as const}}>
             <span>📞 <a href="tel:+971533178176" style={{color:s.sky,textDecoration:'none'}}>+971 533 178 176</a></span>
             <span style={{color:'#374151'}}>|</span>
             <span>✉ <a href="mailto:krones.international@gmail.com" style={{color:s.sky,textDecoration:'none'}}>krones.international@gmail.com</a></span>
@@ -156,29 +150,23 @@ export default function Home() {
           <a href="#" style={{display:'flex',alignItems:'center',gap:'10px',textDecoration:'none',flexShrink:0}}>
             <div style={{width:'42px',height:'42px',background:`linear-gradient(135deg,${s.sky},${s.skyDeep})`,borderRadius:'10px',display:'flex',alignItems:'center',justifyContent:'center',fontFamily:'Cormorant Garamond,serif',color:s.white,fontSize:'1.3rem',fontWeight:700,flexShrink:0}}>KI</div>
             <div>
-              <div className="logo-name" style={{fontFamily:'Cormorant Garamond,serif',fontSize:'1.05rem',fontWeight:700,color:s.black,whiteSpace:'nowrap'}}>Krones International</div>
-              <div className="logo-tag" style={{fontSize:'0.65rem',color:s.skyDeep,fontWeight:500,letterSpacing:'1px',textTransform:'uppercase' as const,whiteSpace:'nowrap'}}>Trusted Source for Raw Materials</div>
+              <div className="logo-name" style={{fontFamily:'Cormorant Garamond,serif',fontSize:'1.05rem',fontWeight:700,color:s.black,whiteSpace:'nowrap' as const}}>Krones International</div>
+              <div className="logo-tag" style={{fontSize:'0.65rem',color:s.skyDeep,fontWeight:500,letterSpacing:'1px',textTransform:'uppercase' as const,whiteSpace:'nowrap' as const}}>Trusted Source for Raw Materials</div>
             </div>
           </a>
-
-          {/* Desktop nav */}
           <ul className="nav-links-desktop" style={{listStyle:'none',gap:'2px',alignItems:'center'}}>
             {[['#','Home'],['#about','About Us'],['#products','Products'],['#','Industries']].map(([href,label])=>(
               <li key={label}><a href={href} style={{padding:'8px 14px',borderRadius:'6px',fontSize:'0.87rem',fontWeight:500,color:s.mid,textDecoration:'none'}}>{label}</a></li>
             ))}
             <li><a href="#contact" style={{background:s.sky,color:s.white,padding:'10px 20px',borderRadius:'8px',fontWeight:600,fontSize:'0.86rem',textDecoration:'none'}}>Contact Us</a></li>
           </ul>
-
-          {/* Hamburger */}
-          <button className="hamburger" onClick={()=>setMenuOpen(!menuOpen)} style={{background:'none',border:'none',cursor:'pointer',padding:'8px',display:'none',flexDirection:'column' as const,gap:'5px'}}>
-            <span style={{width:'24px',height:'2px',background:s.dark,display:'block',transition:'all 0.3s'}}/>
-            <span style={{width:'24px',height:'2px',background:s.dark,display:'block',transition:'all 0.3s'}}/>
-            <span style={{width:'24px',height:'2px',background:s.dark,display:'block',transition:'all 0.3s'}}/>
+          <button className="hamburger" onClick={()=>setMenuOpen(!menuOpen)} style={{background:'none',border:'none',cursor:'pointer',padding:'8px',flexDirection:'column' as const,gap:'5px'}}>
+            <span style={{width:'24px',height:'2px',background:s.dark,display:'block'}}/>
+            <span style={{width:'24px',height:'2px',background:s.dark,display:'block'}}/>
+            <span style={{width:'24px',height:'2px',background:s.dark,display:'block'}}/>
           </button>
         </div>
-
-        {/* Mobile menu */}
-        <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} style={{display:'none',flexDirection:'column' as const,background:s.white,borderTop:`1px solid ${s.border}`,padding:'16px 20px',gap:'8px'}}>
+        <div className={`mobile-menu ${menuOpen?'open':''}`} style={{flexDirection:'column' as const,background:s.white,borderTop:`1px solid ${s.border}`,padding:'16px 20px',gap:'8px'}}>
           {[['#','Home'],['#about','About Us'],['#products','Products'],['#','Industries'],['#contact','Contact Us']].map(([href,label])=>(
             <a key={label} href={href} onClick={()=>setMenuOpen(false)} style={{padding:'12px 16px',borderRadius:'8px',fontSize:'0.95rem',fontWeight:500,color:s.mid,textDecoration:'none',borderBottom:`1px solid ${s.border}`}}>{label}</a>
           ))}
@@ -289,7 +277,7 @@ export default function Home() {
             {products.map(p=>(
               <div key={p.name} style={{background:s.white,borderRadius:'14px',overflow:'hidden',border:`1px solid ${s.border}`}}>
                 <div style={{height:'180px',overflow:'hidden',position:'relative'}}>
-                  <img src={p.img} alt={p.name} style={{width:'100%',height:'100%',objectFit:'cover'}}/>
+                  <img src={p.img} alt={p.name} style={{width:'100%',height:'100%',objectFit:'cover'}} crossOrigin="anonymous"/>
                 </div>
                 <div style={{padding:'20px'}}>
                   <div style={{fontWeight:700,fontSize:'1rem',color:s.black,marginBottom:'8px'}}>{p.name}</div>
