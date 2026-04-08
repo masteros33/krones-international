@@ -212,27 +212,29 @@ export default function Home() {
         </div>
       </section>
 
-      {/* STATS */}
-      <div style={{background:`linear-gradient(90deg,${s.skyDeep},${s.sky})`}}>
-        <div className="stats-grid" style={{maxWidth:'1240px',margin:'0 auto',padding:'0 20px',display:'grid',gridTemplateColumns:'repeat(4,1fr)'}}>
-          {[['9','Years Experience'],['200','Customers Served'],['9','Countries'],['50','Trusted Suppliers']].map(([n,l],i)=>(
-            <div key={l} style={{padding:'28px 16px',textAlign:'center' as const,borderRight:i<3?'1px solid rgba(255,255,255,0.15)':'none'}}>
-              <div data-target={n} style={{fontFamily:'Cormorant Garamond,serif',fontSize:'clamp(1.8rem,4vw,2.6rem)',fontWeight:700,color:s.white,lineHeight:1}}>0</div>
-              <div style={{fontSize:'0.75rem',color:'rgba(255,255,255,0.75)',textTransform:'uppercase' as const,letterSpacing:'1px',marginTop:'4px',fontWeight:500}}>{l}</div>
-            </div>
-          ))}
-        </div>
-      </div>
+     
 
       {/* ABOUT */}
       <section id="about" style={{padding:'80px 0',background:s.skyPale}}>
         <div style={{maxWidth:'1240px',margin:'0 auto',padding:'0 20px'}}>
           <div className="about-grid" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'56px',alignItems:'start'}}>
             <div style={{background:s.black,borderRadius:'16px',padding:'36px',position:'relative',overflow:'hidden'}}>
-              <div style={{fontFamily:'Cormorant Garamond,serif',fontSize:'1.5rem',color:s.white,marginBottom:'12px',fontWeight:700}}>Global Reach From the UAE</div>
+              <div style={{fontFamily:'Cormorant Garamond,serif',fontSize:'1.5rem',color:s.white,marginBottom:'12px',fontWeight:700}}>Source Raw Materials From</div>
               <div style={{color:s.muted,fontSize:'0.9rem',lineHeight:1.7,marginBottom:'20px'}}>Krones International operates from our free zone office in Ras Al Khaimah — delivering plastic raw materials across 9 countries.</div>
               <div style={{display:'flex',flexWrap:'wrap' as const,gap:'8px'}}>
-                {['🇦🇪 UAE','🇮🇳 India','🇨🇳 China','🇺🇸 USA','🇧🇩 Bangladesh','🇰🇷 Korea','🇯🇵 Japan','🇵🇰 Pakistan','🇬🇲 Gambia'].map(c=>(
+                {[
+  '🇺🇸 USA',
+  '🇰🇷 South Korea',
+  '🇨🇳 China',
+  '🇸🇦 Saudi Arabia',
+  '🇦🇪 UAE',
+  '🇫🇷 France',
+  '🇪🇸 Spain',
+  '🇧🇷 Brazil',
+  '🇹🇭 Thailand',
+  '🇴🇲 Oman',
+  '🇹🇼 Taiwan'
+].map(c=>(
                   <span key={c} style={{background:'rgba(14,165,233,0.1)',border:'1px solid rgba(14,165,233,0.2)',color:'#7dd3fc',fontSize:'0.78rem',padding:'5px 12px',borderRadius:'20px'}}>{c}</span>
                 ))}
               </div>
