@@ -220,7 +220,7 @@ export default function Home() {
           <div className="about-grid" style={{display:'grid',gridTemplateColumns:'1fr 1fr',gap:'56px',alignItems:'start'}}>
             <div style={{background:s.black,borderRadius:'16px',padding:'36px',position:'relative',overflow:'hidden'}}>
               <div style={{fontFamily:'Cormorant Garamond,serif',fontSize:'1.5rem',color:s.white,marginBottom:'12px',fontWeight:700}}>Source Raw Materials From</div>
-              <div style={{color:s.muted,fontSize:'0.9rem',lineHeight:1.7,marginBottom:'20px'}}>Krones International operates from our free zone office in Ras Al Khaimah — delivering plastic raw materials across 9 countries.</div>
+              <div style={{color:s.muted,fontSize:'0.9rem',lineHeight:1.7,marginBottom:'20px'}}></div>
               <div style={{display:'flex',flexWrap:'wrap' as const,gap:'8px'}}>
                 {[
   '🇺🇸 USA',
