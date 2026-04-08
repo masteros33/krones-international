@@ -8,17 +8,17 @@ const EMAILJS_TEMPLATE_ID = 'template_5pn8b7d'
 const EMAILJS_PUBLIC_KEY  = 's9bzBaRtEktfBRtF6'
 
 const IMAGES = {
-  pvc:          'https://uniglobustrading.com/wp-content/uploads/2021/11/PVC-powder.jpg',
-  polypropylene:'https://uniglobustrading.com/wp-content/uploads/2021/11/polypropylene.jpg',
-  eva:          'https://uniglobustrading.com/wp-content/uploads/2021/11/EVA.jpg',
-  polyethylene: 'https://uniglobustrading.com/wp-content/uploads/2021/11/polyethylene.jpg',
-  polycarbonate:'https://uniglobustrading.com/wp-content/uploads/2021/11/polycarbonate.jpg',
-  carbonBlack:  'https://uniglobustrading.com/wp-content/uploads/2021/11/carbon-black.jpg',
-  pet:          'https://uniglobustrading.com/wp-content/uploads/2021/11/PET.jpg',
-  nylon6:       'https://uniglobustrading.com/wp-content/uploads/2021/11/nylon6.jpg',
-  abs:          'https://uniglobustrading.com/wp-content/uploads/2021/11/ABS.jpg',
-  pom:          'https://uniglobustrading.com/wp-content/uploads/2021/11/POM.jpg',
-  pbt:          'https://uniglobustrading.com/wp-content/uploads/2021/11/pbt-1.jpg',
+  pvc:          '/images/pvc.jpg',
+  polypropylene:'/images/polypropylene.jpg',
+  eva:          '/images/eva.jpg',
+  polyethylene: '/images/polyethylene.jpg',
+  polycarbonate:'/images/polycarbonate.jpg',
+  carbonBlack:  '/images/carbon-black.jpg',
+  pet:          '/images/pet.jpg',
+  nylon6:       '/images/nylon6.jpg',
+  abs:          '/images/abs.jpg',
+  pom:          '/images/pom.jpg',
+  pbt:          '/images/pbt.jpg',
 }
 
 const products = [
